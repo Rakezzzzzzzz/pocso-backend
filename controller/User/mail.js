@@ -9,8 +9,8 @@ bodyparser.json();
 const transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
-        user: "venkatesh.s.23jitit209@gmail.com",
-        pass: "ytip ejqw qciu dgtc"
+        user: "rakeshskumar0876@gmail.com",
+        pass: "rjqx xowj zfcl lbhr"
     }
 })
 
@@ -40,3 +40,20 @@ const sendMail = async () => {
 }
 
 export default sendMail;
+
+// Test function to verify email configuration
+export const testEmailConfig = async () => {
+    try {
+        const info = await transporter.sendMail({
+            from: 'rakeshskumar0876@gmail.com',
+            to: 'rakeshskumar0876@gmail.com', // Send test email to yourself
+            subject: "Test Email - SMTP Configuration",
+            text: "This is a test email to verify your SMTP configuration is working correctly.",
+        });
+        console.log('✅ Test email sent successfully:', info.response);
+        return true;
+    } catch(err) {
+        console.error('❌ Error sending test email:', err.message);
+        return false;
+    }
+}

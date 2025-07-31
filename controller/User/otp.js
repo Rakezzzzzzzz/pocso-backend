@@ -8,8 +8,8 @@ bodyparser.json();
 const transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
-        user: "venkatesh.s.23jitit209@gmail.com",
-        pass: "ytip ejqw qciu dgtc"
+        user: "rakeshskumar0876@gmail.com",
+        pass: "rjqx xowj zfcl lbhr"
     }
 })
 
@@ -19,7 +19,7 @@ function generateOtp(){
 
 async function sendOtpviaEmail(email, otp){
     const mailoptions = {
-        from: 'venkatesh.s.23jitit209@gmail.com',
+        from: 'rakeshskumar0876@gmail.com',
         to: email,
         subject: "Hello World!",
         text: `Your OTP is ${otp}`
