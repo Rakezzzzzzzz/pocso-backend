@@ -24,7 +24,7 @@ const sendMail = async () => {
             console.log('Student email not found'); 
         }
         const info = await transporter.sendMail({
-            from: 'venkatesh.s.23jitit209@gmail.com',
+            from: 'rakeshskumar0876@gmail.com',
             to: student,
             subject: "Hello World!",
             text: "This is a test email sent from Node.js using MongoDB.",
